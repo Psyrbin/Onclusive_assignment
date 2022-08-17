@@ -28,7 +28,7 @@ the first tokens of the text and discards the rest.
 ## BERT with top k sentences
 Similar to the approach described in [1], I use a sentence-level transformer
 to find the sentences of the `main_text` that are most similar to the `claim`.
-`multi-qa-MiniLM-L6-cos-v1` from the `sentence_transformers` library  is
+`multi-qa-MiniLM-L6-cos-v1` model from the `sentence_transformers` library  is
 used to calculate sentence similarity and top 5 sentences are chosen to
 be the inputs to the BERT model.
 
