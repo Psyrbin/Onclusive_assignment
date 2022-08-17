@@ -1,0 +1,28 @@
+dataset:
+  dataset_name: health_fact
+  tokenizer_name: bert-base-uncased
+  add_metadata_to_input: False
+  use_sentence_transformer: True
+  sentence_transformer_params:
+    sentence_transformer_name: multi-qa-MiniLM-L6-cos-v1
+    top_k_sentences: 5
+  save_path: ../data/dataset_top_k
+
+model:
+  pretrained_model_name: bert-base-uncased
+  metadata_in_input: False
+  bert_layer_params:
+    n_inputs: 768
+    n_neurons: 128
+  output_layer_params:
+    n_outputs: 4
+  save_path: ../bert_top_k
+
+training:
+  optimizer_params:
+    optimizer: madgrad
+    lr: 5e-4
+  metadata_in_dataset: False
+  batch_size: 32
+  n_epochs: 20
+  device: cuda

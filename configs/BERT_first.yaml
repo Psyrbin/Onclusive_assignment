@@ -1,0 +1,25 @@
+dataset:
+  dataset_name: health_fact
+  tokenizer_name: bert-base-uncased
+  add_metadata_to_input: False
+  use_sentence_transformer: False
+  save_path: ../data/dataset_no_modifications
+
+model:
+  pretrained_model_name: bert-base-uncased
+  metadata_in_input: False
+  bert_layer_params:
+    n_inputs: 768
+    n_neurons: 128
+  output_layer_params:
+    n_outputs: 4
+  save_path: ../bert_first
+
+training:
+  optimizer_params:
+    optimizer: madgrad
+    lr: 1e-4
+  metadata_in_dataset: False
+  batch_size: 32
+  n_epochs: 20
+  device: cuda
