@@ -61,10 +61,10 @@ model that always predicts label 2 (51.6% of the training data has this label)
 
 **BERT with top k sentences and metadata** is the best model for all metrics. 
 
-However, its performance is still worse than the results achieved in [1]. 
+Its performance is worse than the results achieved in [1] for all metrics except accuracy. 
 This is not unexpected, since I only trained the layers added on top of BERT.
 Fine-tuning the whole transformer would improve the results, but I do not possess
-computational resources required to train such large models.
+computational resources required to train such large models. 
 
 # References
 [1] Kotonya, N., & Toni, F. (2020). 
